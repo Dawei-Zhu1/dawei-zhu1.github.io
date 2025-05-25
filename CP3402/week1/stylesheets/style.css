@@ -1,0 +1,32 @@
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: bisque;
+}
+
+
+
+nav {
+    border-bottom: solid #dddddd 1px;
+}
+
+#footer {
+    text-align: center;
+}
+
+@media screen and (max-width: 1023px) {
+    /* Float the mobile menu over the page content */
+    .navbar.is-floating .navbar-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        z-index: 999;
+        background-color: #ffffffA0; /* match your navbar background */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(12px);
+    }
+}
