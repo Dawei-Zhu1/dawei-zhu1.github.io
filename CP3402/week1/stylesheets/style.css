@@ -1,21 +1,124 @@
+:root {
+    --nav-height: 5vh;
+    --blur-radius-normal: 12px;
+}
 
 html {
     scroll-behavior: smooth;
 }
 
+
 body {
-    background-color: bisque;
+    /*background-color: bisque;*/
+    position: relative;
+    height: 100vh;
+    background-image: url('../assets/img/Jazmin_Quaynor____WP40DVYDWS.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    overflow: scroll;
 }
 
 
+.fullscreen-bg {
+    height: 100vh;
+    background-image: url('../assets/img/Jazmin_Quaynor____WP40DVYDWS.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.is-dark, .dark-bg-text {
+    color: white !important;
+    text-shadow: black 0 0 16px;
+}
+
+.is-dark {
+    a {
+        color: white !important;
+    }
+}
 
 nav {
-    border-bottom: solid #dddddd 1px;
+    position: fixed !important;
+    width: 100vw;
+    background-color: rgba(58, 42, 36, 0.75) !important;
+    backdrop-filter: blur(var(--blur-radius-normal));
+    height: var(--nav-height);
 }
 
+.navbar-burger {
+    color: white !important;
+}
+
+a {
+    &.navbar-item:hover {
+        background-color: #ffffff20 !important;
+    }
+
+    &.button.is-link {
+        background-color: chocolate;
+    }
+}
+
+
+#content {
+    position: relative;
+    height: 95vh;
+    padding: 8vh 0;
+
+    &.homepage {
+        background-image: linear-gradient(to top, #00000020 0%, #00000000 15%, #00000080 100%);
+    }
+
+}
+
+/* Header */
+#header {
+    /*margin: 10vh 10vh;*/
+    padding: 10vh 10vh;
+}
+
+#title-homepage {
+    position: relative;
+    text-align: left;
+    font-size: 64px;
+}
+
+/* Footer */
 #footer {
     text-align: center;
+    height: 10vh;
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+    y: 0;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to bottom, #00000020 23%, #00000080);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px); /* for Safari */
+        z-index: -1;
+    }
 }
+
+
+/* Menu */
+.menu .columns {
+    color: black;
+    border-radius: 16px;
+    background-color: #ffffffC0;
+    backdrop-filter: blur(var(--blur-radius-normal));
+    /*margin: 10px;*/
+    text-shadow: none;
+}
+
 
 @media screen and (max-width: 1023px) {
     /* Float the mobile menu over the page content */
@@ -25,8 +128,8 @@ nav {
         left: 0;
         right: 0;
         z-index: 999;
-        background-color: #ffffffA0; /* match your navbar background */
+        background-color: rgba(58, 42, 36, 0.75); /* match your navbar background */
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        backdrop-filter: blur(12px);
+        backdrop-filter: blur(var(--blur-radius-normal));
     }
 }
