@@ -38,6 +38,7 @@ body {
     a {
         color: white !important;
     }
+
 }
 
 nav {
@@ -62,16 +63,17 @@ a {
     }
 }
 
-
 #content {
     position: relative;
     height: 95vh;
     padding: 8vh 0;
 
     &.dark-bg-mask {
-        background-image: linear-gradient(to top, #00000020 0%, #00000000 15%, #00000080 100%);
+        background-image: linear-gradient(to top, #00000020 0%, #00000080 50%);
+        &.pg-home {
+            background-image: linear-gradient(to top, #00000020 0%, #00000000 15% 80%, #00000080 100%);
+        }
     }
-
 }
 
 /* Header */
