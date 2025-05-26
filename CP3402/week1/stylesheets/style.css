@@ -28,12 +28,13 @@ body {
     background-repeat: no-repeat;
 }
 
-.is-dark, .dark-bg-text {
-    color: white !important;
-    text-shadow: black 0 0 16px;
-}
 
 .is-dark {
+    &, .dark-bg-text {
+        color: white !important;
+        text-shadow: black 0 0 16px;
+    }
+
     a {
         color: white !important;
     }
